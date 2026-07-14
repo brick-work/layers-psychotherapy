@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Layers Psychotherapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 16px;
+    }
+
+    .post-card {
+      background: var(--mist);
+      border: 1px solid var(--slate-100);
+      border-radius: 8px;
+      padding: 36px;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .post-card:hover {
+      box-shadow: 0 8px 32px rgba(44,66,87,0.1);
+      transform: translateY(-2px);
+    }
+
+    .post-date {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--slate-300);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .post-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--slate-900);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .post-excerpt {
+      font-size: 15px;
+      color: var(--slate-500);
+      line-height: 1.7;
+    }
+
+    .post-tag {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      background: rgba(91,126,156,0.1);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 820px) {
+      .post-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><em>Layers</em> Psychotherapy</a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html" class="nav-active">Blog</a></li>
+      <li><a href="contact.html">Get in touch</a></li>
+      <li><a href="https://jack-hambrick.clientsecure.me" class="nav-cta" target="_blank" rel="noopener">Book a session</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-main">
+  <div class="page-inner">
+
+    <div class="page-header">
+      <p class="eyebrow">Blog</p>
+      <h1 class="page-title">Thoughts on the <em>work</em></h1>
+      <p class="page-subtitle">Writing on therapy, relationships, mental health, and what it means to do real work on yourself.</p>
+    </div>
+
+    <div class="post-grid">
+
+      <a href="blog/what-is-therapy-for.html" class="post-card">
+        <p class="post-date">June 28, 2026</p>
+        <h2 class="post-title">What Is Therapy Actually For?</h2>
+        <p class="post-excerpt">Most people come to therapy because something is wrong. But the ones who get the most out of it usually come because they're ready to understand something.</p>
+        <span class="post-tag">Starting therapy</span>
+      </a>
+
+      <a href="blog/what-couples-therapy-is-actually-like.html" class="post-card">
+        <p class="post-date">June 28, 2026</p>
+        <h2 class="post-title">What Couples Therapy Is Actually Like</h2>
+        <p class="post-excerpt">Most couples come in when things have gotten bad enough that they feel like they have no other option. It doesn't have to be a last resort.</p>
+        <span class="post-tag">Couples</span>
+      </a>
+
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><em>Layers</em> Psychotherapy</div>
+    <p class="footer-note">© 2026 Hambrick Psychotherapy LLC · Columbus, Ohio</p>
+  </div>
+</footer>
+
+</body>
+</html>

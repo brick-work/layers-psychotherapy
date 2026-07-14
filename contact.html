@@ -8,6 +8,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
+  <style>
+    .sp-official {
+      border-top: 1px solid var(--slate-100);
+      margin-top: 64px;
+      padding-top: 56px;
+    }
+
+    .sp-widget-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .sp-widget-card {
+      background: var(--mist);
+      border: 1px solid var(--slate-100);
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .sp-widget-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .sp-widget-body {
+      font-size: 14px;
+      color: var(--slate-500);
+      margin-bottom: 16px;
+    }
+
+    /* SimplePractice's own widget button styles */
+    .spwidget-button-wrapper { text-align: left; }
+    .spwidget-button {
+      display: inline-block;
+      padding: 6px 12px;
+      color: #1371C8;
+      background: #fff;
+      border: 1px solid #1371C8;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .spwidget-button:hover { background: #fff; color: #0F5AA0; }
+    .spwidget-button:active {
+      color: rgba(255, 255, 255, .75) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .15) inset;
+    }
+
+    @media (max-width: 820px) {
+      .sp-widget-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -95,6 +153,28 @@
       </form>
     </div>
 
+    <div class="sp-official">
+      <p class="eyebrow" style="color: var(--blue); margin-bottom: 8px;">Prefer to go through SimplePractice?</p>
+      <h2 class="section-title">Request through the official client portal</h2>
+      <p class="body-lg">If you'd rather set things up through the same portal I use for scheduling and records, you can request an appointment or send a message directly through SimplePractice instead of the quick form above.</p>
+      <div class="sp-widget-row">
+        <div class="sp-widget-card">
+          <h3 class="sp-widget-title">Request an appointment</h3>
+          <p class="sp-widget-body">Start intake directly through the SimplePractice client portal.</p>
+          <!-- Start SimplePractice Appointment-Request Widget Embed Code -->
+          <div class="spwidget-button-wrapper"><a href="https://jack-hambrick.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="7d2f5cdc-e1dc-4d16-9f16-f85a1a4f0957" data-spwidget-scope-uri="jack-hambrick" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request Appointment</a></div>
+          <!-- End SimplePractice Appointment-Request Widget Embed Code -->
+        </div>
+        <div class="sp-widget-card">
+          <h3 class="sp-widget-title">Send a message</h3>
+          <p class="sp-widget-body">Contact through the SimplePractice client portal instead of email.</p>
+          <!-- Start SimplePractice Contact Form Widget Embed Code -->
+          <div class="spwidget-button-wrapper"><a href="https://jack-hambrick.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="7d2f5cdc-e1dc-4d16-9f16-f85a1a4f0957" data-spwidget-scope-uri="jack-hambrick" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-channel="embedded_widget" data-spwidget-type="Contact form" data-spwidget-contact data-spwidget-scope-global data-spwidget-autobind>Contact</a></div>
+          <!-- End SimplePractice Contact Form Widget Embed Code -->
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
@@ -115,6 +195,9 @@
     form.replaceWith(note);
   }
 </script>
+
+<!-- SimplePractice widget integration (binds both widgets in the "sp-official" section above) -->
+<script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
 
 </body>
 </html>
