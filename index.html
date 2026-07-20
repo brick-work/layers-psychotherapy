@@ -38,6 +38,7 @@
 
 <main>
   <section class="hero">
+    <div class="blimp-wrap"><img class="blimp" src="blimp.png" alt="The Goodyear blimp drifting across a blue sky"></div>
     <div class="hero-inner">
       <div>
         <p class="hero-eyebrow">Psychotherapy · Columbus, Ohio · Telehealth statewide</p>
@@ -51,34 +52,34 @@
           <a href="contact.html" class="btn-secondary">Get in touch</a>
         </div>
       </div>
-      <div class="hero-card">
-        <p class="hero-card-label">What brings people here</p>
-        <div class="hero-card-item">
+      <div class="hero-chips">
+        <p class="hero-chips-label">What brings people here</p>
+        <div class="chip">
           <div class="dot blue"></div>
           <div>
-            <div class="hero-card-text">Relationships &amp; communication</div>
-            <div class="hero-card-sub">Individuals, couples, and families</div>
+            <div class="chip-text">Relationships &amp; communication</div>
+            <div class="chip-sub">Individuals, couples, and families</div>
           </div>
         </div>
-        <div class="hero-card-item">
+        <div class="chip">
           <div class="dot sage"></div>
           <div>
-            <div class="hero-card-text">Identity &amp; life transitions</div>
-            <div class="hero-card-sub">Making sense of who you are and where you're going</div>
+            <div class="chip-text">Identity &amp; life transitions</div>
+            <div class="chip-sub">Making sense of who you are and where you're going</div>
           </div>
         </div>
-        <div class="hero-card-item">
+        <div class="chip">
           <div class="dot sand"></div>
           <div>
-            <div class="hero-card-text">Anxiety, ADHD &amp; mood</div>
-            <div class="hero-card-sub">Practical tools, not just talk</div>
+            <div class="chip-text">Anxiety, ADHD &amp; mood</div>
+            <div class="chip-sub">Practical tools, not just talk</div>
           </div>
         </div>
-        <div class="hero-card-item">
+        <div class="chip">
           <div class="dot blue"></div>
           <div>
-            <div class="hero-card-text">Trauma &amp; the past</div>
-            <div class="hero-card-sub">At your pace, on your terms</div>
+            <div class="chip-text">Trauma &amp; the past</div>
+            <div class="chip-sub">At your pace, on your terms</div>
           </div>
         </div>
       </div>
@@ -92,6 +93,51 @@
     <p class="footer-note">© 2026 Hambrick Psychotherapy LLC · Columbus, Ohio</p>
   </div>
 </footer>
+
+<script>
+  // Scroll parallax: the sky pans gently and the blimp sprite rises as you
+  // scroll. The background is clamped so the blimp baked into the photo
+  // stays below the viewport — the floating sprite is the only blimp seen.
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var hero = document.querySelector('.hero');
+    var wrap = document.querySelector('.blimp-wrap');
+    if (!hero || !wrap) return;
+    var PHOTO_W = 3024, PHOTO_H = 4032, ZOOM = 1.3, BLIMP_Y = 0.632;
+    var GLIDE = 0.02; // per-frame chase rate — smaller = slower drift
+    var pa = 0, running = false;
+    function frame() {
+      var w = window.innerWidth, h = window.innerHeight;
+      var max = document.documentElement.scrollHeight - h;
+      var p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      // drift the animated progress toward the scroll target very slowly,
+      // so the blimp glides in over a few seconds instead of snapping
+      pa += (p - pa) * GLIDE;
+      if (Math.abs(p - pa) < 0.001) { pa = p; running = false; }
+      if (w > 820) {
+        var bgH = w * ZOOM / PHOTO_W * PHOTO_H;
+        var slack = Math.max(0, bgH - hero.offsetHeight);
+        var tAllowed = Math.max(0, BLIMP_Y * bgH - hero.offsetHeight - 60);
+        var t0 = Math.min(0.3 * slack, tAllowed);
+        var t1 = Math.min(0.7 * slack, tAllowed);
+        hero.style.backgroundPosition = 'left ' + (-(t0 + pa * (t1 - t0))) + 'px';
+        var travel = wrap.offsetHeight + 0.06 * h;
+        wrap.style.transform = 'translateY(' + ((1 - pa) * travel) + 'px)';
+      } else {
+        hero.style.backgroundPosition = '';
+        wrap.style.transform = '';
+        running = false;
+      }
+      if (running) requestAnimationFrame(frame);
+    }
+    function wake() {
+      if (!running) { running = true; requestAnimationFrame(frame); }
+    }
+    window.addEventListener('scroll', wake, { passive: true });
+    window.addEventListener('resize', wake);
+    wake();
+  })();
+</script>
 
 </body>
 </html>
