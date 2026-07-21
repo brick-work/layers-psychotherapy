@@ -861,7 +861,8 @@ footer {
 .ehero-note {
   font-size: 12px;
   letter-spacing: 0.04em;
-  color: var(--ink-soft);
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(35,34,28,0.35);
   margin-top: 18px;
 }
 
