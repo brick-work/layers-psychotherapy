@@ -798,7 +798,20 @@ footer {
 .ehero-role {
   font-size: 14px;
   color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+
+.ehero-body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 430px;
   margin-bottom: 36px;
+}
+
+.ehero-body strong {
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .ehero-actions {

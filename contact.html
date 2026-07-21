@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Layers Psychotherapy</title>
+  <title>Contact · Layers Psychotherapy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -114,7 +114,7 @@
       </div>
 
       <form action="https://formsubmit.co/hello@layerspsychotherapy.com" method="POST">
-        <input type="hidden" name="_subject" value="New inquiry — layerspsychotherapy.com" />
+        <input type="hidden" name="_subject" value="New inquiry: layerspsychotherapy.com" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://layerspsychotherapy.com/contact.html?sent=1" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -190,7 +190,7 @@
   if (new URLSearchParams(window.location.search).get('sent') === '1') {
     var form = document.querySelector('form');
     var note = document.createElement('p');
-    note.textContent = "Message sent — I'll follow up within one business day.";
+    note.textContent = "Message sent. I'll follow up within one business day.";
     note.style.cssText = 'padding:16px;background:#eef3ef;color:#3d5c47;border-radius:6px;';
     form.replaceWith(note);
   }
