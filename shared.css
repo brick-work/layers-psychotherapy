@@ -847,14 +847,16 @@ footer {
 .ehero-cta:hover .ehero-cta-arrow { transform: translateX(4px); }
 
 .ehero-quiet-link {
-  font-size: 14px;
-  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
   text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(192,83,39,0.5);
+  text-underline-offset: 4px;
+  text-decoration-color: var(--terracotta);
+  text-decoration-thickness: 1.5px;
 }
 
-.ehero-quiet-link:hover { color: var(--ink); }
+.ehero-quiet-link:hover { color: var(--terracotta); }
 
 .ehero-note {
   font-size: 12px;
