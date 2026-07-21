@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Photo Tryouts — pick a letter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Temporary comparison sheet — not part of the site. Delete after choosing. */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Hanken Grotesk', sans-serif; background: #f8f6f0; color: #23221c; padding: 32px 24px 64px; }
+    h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28px; margin-bottom: 6px; }
+    .note { font-size: 14px; color: #6d6759; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+    .tile { border-radius: 8px; overflow: hidden; box-shadow: 0 8px 30px rgba(35,34,28,0.1); background: #fff; }
+    .shot {
+      aspect-ratio: 16 / 10;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 22px 20px;
+    }
+    .shot::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(248,246,240,0.55) 0%, rgba(248,246,240,0.12) 45%, rgba(248,246,240,0) 100%);
+    }
+    .shot > * { position: relative; }
+    .mini-h { font-family: 'Fraunces', serif; font-weight: 400; font-size: 26px; line-height: 1.1; letter-spacing: -0.01em; }
+    .mini-h em { font-style: italic; color: #c05327; }
+    .mini-name { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; margin-top: 10px; }
+    .badge {
+      position: absolute; top: 14px; right: 14px;
+      background: #23221c; color: #f8f6f0;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+      width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .badge.current { background: #c05327; }
+    .cap { padding: 12px 16px 14px; font-size: 12.5px; color: #6d6759; line-height: 1.45; }
+    .cap strong { color: #23221c; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Hero photo tryouts</h1>
+  <p class="note">Each image is cropped and veiled exactly like the homepage hero, with the headline overlaid so you can judge how the type sits. Tell Claude the letter you like. <strong>A</strong> is the one currently on the site.</p>
+  <div class="grid">
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1759304863516-ff601cf6b86c?q=80&w=900&auto=format&fit=crop')"><span class="badge current">A</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>A — current pick.</strong> Misty lake reflecting mountains and trees at dawn.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1761816336242-ddeec5263e93?q=80&w=900&auto=format&fit=crop')"><span class="badge">B</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>B.</strong> Misty mountains reflected in a calm lake at dawn.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1779378027650-3930e4d9f429?q=80&w=900&auto=format&fit=crop')"><span class="badge">C</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>C.</strong> Misty lake reflecting sunrise over mountains and forest.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1781124897128-7e3ea12a8bc1?q=80&w=900&auto=format&fit=crop')"><span class="badge">D</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>D.</strong> Mist rising from a serene lake, forested shoreline.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1777383504425-2cd8c91876a8?q=80&w=900&auto=format&fit=crop')"><span class="badge">E</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>E.</strong> Misty lake with a lone tree on the shore.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1763696796625-fa2e4db9491c?q=80&w=900&auto=format&fit=crop')"><span class="badge">F</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>F.</strong> A lone boat on a misty lake surrounded by mountains.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1675458349418-b6e8215f1d6b?q=80&w=900&auto=format&fit=crop')"><span class="badge">G</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>G.</strong> Mountain range reflected in still water.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1763735088491-c6229895f710?q=80&w=900&auto=format&fit=crop')"><span class="badge">H</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>H.</strong> Misty lake with autumn trees on hills at sunrise.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1759478439124-c63f4f2ddbb5?q=80&w=900&auto=format&fit=crop')"><span class="badge">I</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>I.</strong> Mountain landscape with a lake and morning mist.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1766999853340-dab8c0168120?q=80&w=900&auto=format&fit=crop')"><span class="badge">J</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>J.</strong> Mountains reflected in a calm lake at sunrise.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1778003223399-0564737d6482?q=80&w=900&auto=format&fit=crop')"><span class="badge">K</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>K.</strong> Misty mountains shrouded in clouds over a serene lake.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1708640577106-c2cf6523840b?q=80&w=900&auto=format&fit=crop')"><span class="badge">L</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>L.</strong> Foggy lake with trees in the background.</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1759434192583-110d20997bfe?q=80&w=900&auto=format&fit=crop')"><span class="badge">M</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>M.</strong> Golden peaks reflected in a calm lake at sunrise (bolder, busier).</div></div>
+    <div class="tile"><div class="shot" style="background-image: linear-gradient(180deg, rgba(248,246,240,0.55), rgba(248,246,240,0.12) 45%, rgba(248,246,240,0)), url('https://images.unsplash.com/photo-1530256379202-4077bd8ab2c6?q=80&w=900&auto=format&fit=crop')"><span class="badge">N</span><div class="mini-h">There&rsquo;s<br /><em>layers</em> to this.</div><div class="mini-name">JACK HAMBRICK</div></div><div class="cap"><strong>N.</strong> Lakeside village in fog (Hallstatt — the most "Jung's window" of the set).</div></div>
+  </div>
+</body>
+</html>
