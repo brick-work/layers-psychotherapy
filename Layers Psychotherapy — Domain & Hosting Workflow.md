@@ -1,3 +1,9 @@
+---
+tags: [layers-psychotherapy, website, work]
+type: reference
+date: 2026-06-25
+---
+
 # Layers Psychotherapy — Domain & Hosting Workflow
 
 ## Current setup
