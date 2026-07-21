@@ -111,8 +111,11 @@
       if (w > 820) {
         var bgH = w * ZOOM / PHOTO_W * PHOTO_H;
         var slack = Math.max(0, bgH - hero.offsetHeight);
-        var t0 = 0.3 * slack;
-        var t1 = 0.7 * slack;
+        // never pan below ~59% of the photo — the lower half is hazy,
+        // out-of-focus sky that reads as a washed-out smudge on screen
+        var tMax = Math.max(0, 0.59 * bgH - hero.offsetHeight);
+        var t0 = Math.min(0.3 * slack, tMax);
+        var t1 = Math.min(0.7 * slack, tMax);
         hero.style.backgroundPosition = 'left ' + (-(t0 + pa * (t1 - t0))) + 'px';
       } else {
         hero.style.backgroundPosition = '';
