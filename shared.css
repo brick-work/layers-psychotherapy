@@ -375,10 +375,11 @@ nav {
 
 .about-photo {
   display: block;
-  width: 100%;
+  width: 65%;
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center 22%;
+  border: 3px solid var(--terracotta);
   border-radius: 8px;
 }
 
