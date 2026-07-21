@@ -165,30 +165,6 @@ nav {
 
 .hero-inner { position: relative; z-index: 1; }
 
-/* ── BLIMP ── */
-.blimp-wrap {
-  position: absolute;
-  right: 7%;
-  bottom: 4%;
-  width: clamp(240px, 28vw, 440px);
-  z-index: 0;
-  pointer-events: none;
-  will-change: transform;
-  filter: drop-shadow(0 10px 24px rgba(13,31,53,0.25));
-}
-
-.blimp {
-  display: block;
-  width: 100%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes blimp-bob {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
-  }
-  .blimp { animation: blimp-bob 6.5s ease-in-out infinite; }
-}
 
 .hero-inner {
   max-width: var(--max-w);
@@ -728,7 +704,6 @@ footer {
   }
 
   .hero { min-height: auto; background-size: cover; background-position: center bottom; }
-  .blimp-wrap { display: none; }
   .hero-inner { padding: 72px 24px 64px; }
   .services-grid, .approach-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
