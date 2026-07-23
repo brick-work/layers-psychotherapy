@@ -932,6 +932,11 @@ footer {
   font-weight: 400;
 }
 
+/* Lora instead of Fraunces for interior page titles: Fraunces' capital J
+   drops a swash tail below the baseline (Jack vetoed it on the About title);
+   Lora's J sits on the line. */
+.editorial .page-title { font-family: 'Lora', serif; }
+
 .editorial .page-title em { color: var(--terracotta); }
 
 .editorial .eyebrow { color: var(--terracotta); }
