@@ -754,15 +754,15 @@ footer {
   padding-top: 64px;
   position: relative;
   /* Misty mountain lake at dawn (Unsplash photo 1759304863516, Unsplash
-     License — free commercial use). Served from Unsplash's CDN for now;
-     download into the repo before deploy. The cream veil up top keeps the
-     ink type readable; the bottom gradient is the fallback while loading. */
+     License, free commercial use), saved locally as hero-lake.jpg. The cream
+     veil up top keeps the ink type readable; the bottom gradient is the
+     fallback while loading. */
   background:
     linear-gradient(180deg,
       rgba(248,246,240,0.55) 0%,
       rgba(248,246,240,0.12) 45%,
       rgba(248,246,240,0) 100%),
-    url('https://images.unsplash.com/photo-1759304863516-ff601cf6b86c?q=80&w=2400&auto=format&fit=crop'),
+    url('hero-lake.jpg'),
     linear-gradient(180deg, #dde6ec 0%, #e8e3d6 48%, #f0d8b6 78%, #ecc49c 100%);
   background-size: cover;
   background-position: center;
