@@ -375,7 +375,7 @@ nav {
 
 .about-photo {
   display: block;
-  width: 85%;
+  width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center 22%;
@@ -932,10 +932,11 @@ footer {
   font-weight: 400;
 }
 
-/* Lora instead of Fraunces for interior page titles: Fraunces' capital J
-   drops a swash tail below the baseline (Jack vetoed it on the About title);
-   Lora's J sits on the line. */
-.editorial .page-title { font-family: 'Lora', serif; }
+/* Hanken Grotesk for interior page titles: both serif candidates (Fraunces,
+   then Lora) drop the capital J below the baseline and Jack vetoed each on
+   the About title; the sans J sits clean. */
+.editorial .page-title { font-family: 'Hanken Grotesk', sans-serif; font-weight: 500; }
+.editorial .page-title em { font-style: normal; }
 
 .editorial .page-title em { color: var(--terracotta); }
 
