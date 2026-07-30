@@ -75,7 +75,15 @@ nav {
   letter-spacing: -0.01em;
 }
 
-.nav-logo em { font-style: italic; color: var(--orange); }
+.nav-logo em { font-style: italic; color: var(--slate-900); }
+
+.nav-logo em:hover {
+  background: linear-gradient(to bottom, var(--slate-900) 50%, var(--orange) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 
 .nav-links {
   display: flex;
@@ -714,7 +722,15 @@ footer {
   color: var(--slate-700);
 }
 
-.footer-logo em { font-style: italic; color: var(--orange); }
+.footer-logo em { font-style: italic; color: var(--slate-700); }
+
+.footer-logo em:hover {
+  background: linear-gradient(to bottom, var(--slate-700) 50%, var(--orange) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 
 .footer-note { font-size: 13px; color: var(--slate-300); }
 
@@ -744,7 +760,15 @@ footer {
 }
 
 .editorial .nav-logo { color: var(--ink); }
-.editorial .nav-logo em { color: var(--terracotta); }
+.editorial .nav-logo em { color: var(--ink); }
+
+.editorial .nav-logo em:hover {
+  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 .editorial .nav-links a { color: var(--ink-soft); }
 .editorial .nav-links a:hover { color: var(--ink); }
 
@@ -1050,7 +1074,15 @@ footer {
 }
 
 .editorial .footer-logo { color: var(--ink); }
-.editorial .footer-logo em { color: var(--terracotta); }
+.editorial .footer-logo em { color: var(--ink); }
+
+.editorial .footer-logo em:hover {
+  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 .editorial .footer-note { color: var(--ink-soft); }
 
 @media (max-width: 900px) {
