@@ -51,9 +51,9 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(192,83,39,0.96);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--terracotta-deep);
+  border-bottom: 1px solid var(--slate-100);
 }
 
 .nav-inner {
@@ -70,12 +70,12 @@ nav {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 500;
-  color: var(--white);
+  color: var(--slate-900);
   text-decoration: none;
   letter-spacing: -0.01em;
 }
 
-.nav-logo em { font-style: italic; color: rgba(255,255,255,0.85); }
+.nav-logo em { font-style: italic; color: var(--orange); }
 
 .nav-links {
   display: flex;
@@ -87,18 +87,18 @@ nav {
 .nav-links a {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255,255,255,0.82);
+  color: var(--slate-500);
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.2s;
 }
 
 .nav-links a:hover,
-.nav-links a.nav-active { color: var(--white); }
+.nav-links a.nav-active { color: var(--slate-900); }
 
 .nav-cta {
-  background: var(--white) !important;
-  color: var(--terracotta) !important;
+  background: var(--orange) !important;
+  color: var(--white) !important;
   padding: 8px 20px;
   border-radius: 100px;
   font-size: 13px !important;
@@ -106,8 +106,8 @@ nav {
   transition: background 0.2s !important;
 }
 
-.nav-cta:hover { background: var(--paper) !important; }
-.nav-cta-active { background: var(--paper) !important; }
+.nav-cta:hover { background: var(--orange-light) !important; }
+.nav-cta-active { background: var(--orange-light) !important; }
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -692,8 +692,8 @@ textarea { resize: vertical; min-height: 120px; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--terracotta);
-  border-top: 1px solid var(--terracotta-deep);
+  background: var(--mist);
+  border-top: 1px solid var(--slate-100);
   padding: 40px 32px;
 }
 
@@ -711,12 +711,12 @@ footer {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 500;
-  color: var(--white);
+  color: var(--slate-700);
 }
 
-.footer-logo em { font-style: italic; color: rgba(255,255,255,0.85); }
+.footer-logo em { font-style: italic; color: var(--orange); }
 
-.footer-note { font-size: 13px; color: rgba(255,255,255,0.75); }
+.footer-note { font-size: 13px; color: var(--slate-300); }
 
 /* ══ EDITORIAL HOMEPAGE ══
    Warm, editorial split-screen look (2026-07-20).
@@ -739,25 +739,25 @@ footer {
 }
 
 .editorial nav {
-  background: rgba(192,83,39,0.96);
-  border-bottom: 1px solid var(--terracotta-deep);
+  background: rgba(248,246,240,0.92);
+  border-bottom: 1px solid var(--hairline);
 }
 
-.editorial .nav-logo,
-.editorial .nav-logo em { color: var(--white); }
-.editorial .nav-links a { color: rgba(255,255,255,0.82); }
-.editorial .nav-links a:hover { color: var(--white); }
+.editorial .nav-logo { color: var(--ink); }
+.editorial .nav-logo em { color: var(--terracotta); }
+.editorial .nav-links a { color: var(--ink-soft); }
+.editorial .nav-links a:hover { color: var(--ink); }
 
 .editorial .nav-cta {
-  background: var(--paper) !important;
-  color: var(--terracotta) !important;
+  background: var(--terracotta) !important;
+  color: var(--paper) !important;
   border-radius: 2px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 11px !important;
 }
 
-.editorial .nav-cta:hover { background: var(--paper-deep) !important; }
+.editorial .nav-cta:hover { background: var(--terracotta-deep) !important; }
 
 /* ── Split hero ── */
 .ehero {
@@ -1045,13 +1045,13 @@ footer {
 
 /* ── Editorial footer ── */
 .editorial footer {
-  background: var(--terracotta);
-  border-top: 1px solid var(--terracotta-deep);
+  background: var(--paper);
+  border-top: 1px solid var(--hairline);
 }
 
-.editorial .footer-logo,
-.editorial .footer-logo em { color: var(--white); }
-.editorial .footer-note { color: rgba(255,255,255,0.75); }
+.editorial .footer-logo { color: var(--ink); }
+.editorial .footer-logo em { color: var(--terracotta); }
+.editorial .footer-note { color: var(--ink-soft); }
 
 @media (max-width: 900px) {
   .ehero { grid-template-columns: 1fr; }
