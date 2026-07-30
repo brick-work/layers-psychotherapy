@@ -894,7 +894,7 @@ footer {
 .ehero-cta:hover .ehero-cta-arrow { transform: translateX(4px); }
 
 .ehero-quiet-link {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--ink);
   text-decoration: underline;
@@ -903,7 +903,13 @@ footer {
   text-decoration-thickness: 1.5px;
 }
 
-.ehero-quiet-link:hover { color: var(--terracotta); }
+.ehero-quiet-link:hover {
+  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
 
 .ehero-note {
   font-size: 12px;
