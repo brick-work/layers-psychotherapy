@@ -20,6 +20,10 @@
   --blue-bright: #2e8de8;
   --orange:    #e85c1a;
   --orange-light: #ff7a3d;
+  --paper:      #f8f6f0;
+  --paper-deep: #efece3;
+  --terracotta:       #c05327;
+  --terracotta-deep:  #a84618;
   --white:     #ffffff;
   --mist:      #f0f7ff;
   --sage:      #7a9b76;
@@ -47,9 +51,9 @@ nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(255,255,255,0.92);
+  background: rgba(192,83,39,0.96);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--slate-100);
+  border-bottom: 1px solid var(--terracotta-deep);
 }
 
 .nav-inner {
@@ -66,12 +70,12 @@ nav {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 500;
-  color: var(--slate-900);
+  color: var(--white);
   text-decoration: none;
   letter-spacing: -0.01em;
 }
 
-.nav-logo em { font-style: italic; color: var(--blue); }
+.nav-logo em { font-style: italic; color: rgba(255,255,255,0.85); }
 
 .nav-links {
   display: flex;
@@ -83,26 +87,27 @@ nav {
 .nav-links a {
   font-size: 14px;
   font-weight: 500;
-  color: var(--slate-500);
+  color: rgba(255,255,255,0.82);
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 0.2s;
 }
 
 .nav-links a:hover,
-.nav-links a.nav-active { color: var(--slate-900); }
+.nav-links a.nav-active { color: var(--white); }
 
 .nav-cta {
-  background: var(--orange) !important;
-  color: var(--white) !important;
+  background: var(--white) !important;
+  color: var(--terracotta) !important;
   padding: 8px 20px;
   border-radius: 100px;
   font-size: 13px !important;
+  white-space: nowrap;
   transition: background 0.2s !important;
 }
 
-.nav-cta:hover { background: var(--orange-light) !important; }
-.nav-cta-active { background: var(--orange-light) !important; }
+.nav-cta:hover { background: var(--paper) !important; }
+.nav-cta-active { background: var(--paper) !important; }
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -687,8 +692,8 @@ textarea { resize: vertical; min-height: 120px; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--mist);
-  border-top: 1px solid var(--slate-100);
+  background: var(--terracotta);
+  border-top: 1px solid var(--terracotta-deep);
   padding: 40px 32px;
 }
 
@@ -706,12 +711,12 @@ footer {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 500;
-  color: var(--slate-700);
+  color: var(--white);
 }
 
-.footer-logo em { font-style: italic; color: var(--blue); }
+.footer-logo em { font-style: italic; color: rgba(255,255,255,0.85); }
 
-.footer-note { font-size: 13px; color: var(--slate-300); }
+.footer-note { font-size: 13px; color: rgba(255,255,255,0.75); }
 
 /* ══ EDITORIAL HOMEPAGE ══
    Warm, editorial split-screen look (2026-07-20).
@@ -734,25 +739,25 @@ footer {
 }
 
 .editorial nav {
-  background: rgba(248,246,240,0.92);
-  border-bottom: 1px solid var(--hairline);
+  background: rgba(192,83,39,0.96);
+  border-bottom: 1px solid var(--terracotta-deep);
 }
 
 .editorial .nav-logo,
-.editorial .nav-logo em { color: var(--ink); }
-.editorial .nav-links a { color: var(--ink-soft); }
-.editorial .nav-links a:hover { color: var(--ink); }
+.editorial .nav-logo em { color: var(--white); }
+.editorial .nav-links a { color: rgba(255,255,255,0.82); }
+.editorial .nav-links a:hover { color: var(--white); }
 
 .editorial .nav-cta {
-  background: var(--terracotta) !important;
-  color: var(--paper) !important;
+  background: var(--paper) !important;
+  color: var(--terracotta) !important;
   border-radius: 2px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 11px !important;
 }
 
-.editorial .nav-cta:hover { background: var(--terracotta-deep) !important; }
+.editorial .nav-cta:hover { background: var(--paper-deep) !important; }
 
 /* ── Split hero ── */
 .ehero {
@@ -1040,13 +1045,13 @@ footer {
 
 /* ── Editorial footer ── */
 .editorial footer {
-  background: var(--paper);
-  border-top: 1px solid var(--hairline);
+  background: var(--terracotta);
+  border-top: 1px solid var(--terracotta-deep);
 }
 
 .editorial .footer-logo,
-.editorial .footer-logo em { color: var(--ink); }
-.editorial .footer-note { color: var(--ink-soft); }
+.editorial .footer-logo em { color: var(--white); }
+.editorial .footer-note { color: rgba(255,255,255,0.75); }
 
 @media (max-width: 900px) {
   .ehero { grid-template-columns: 1fr; }
