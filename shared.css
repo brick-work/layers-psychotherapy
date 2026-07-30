@@ -78,7 +78,7 @@ nav {
 .nav-logo em { font-style: italic; color: var(--slate-900); }
 
 .nav-logo em:hover {
-  background: linear-gradient(to bottom, var(--slate-900) 50%, var(--orange) 50%);
+  background: linear-gradient(to bottom, var(--slate-900) 25%, var(--orange) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -725,7 +725,7 @@ footer {
 .footer-logo em { font-style: italic; color: var(--slate-700); }
 
 .footer-logo em:hover {
-  background: linear-gradient(to bottom, var(--slate-700) 50%, var(--orange) 50%);
+  background: linear-gradient(to bottom, var(--slate-700) 25%, var(--orange) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -763,7 +763,7 @@ footer {
 .editorial .nav-logo em { color: var(--ink); }
 
 .editorial .nav-logo em:hover {
-  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  background: linear-gradient(to bottom, var(--ink) 25%, var(--terracotta) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -894,7 +894,7 @@ footer {
 .ehero-cta:hover .ehero-cta-arrow { transform: translateX(4px); }
 
 .ehero-quiet-link {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--ink);
   text-decoration: underline;
@@ -904,7 +904,7 @@ footer {
 }
 
 .ehero-quiet-link:hover {
-  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  background: linear-gradient(to bottom, var(--ink) 25%, rgba(192,83,39,0.6) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -990,7 +990,7 @@ footer {
 .editorial .section-title:hover,
 .editorial .approach-item-title:hover,
 .editorial .principle-title:hover {
-  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  background: linear-gradient(to bottom, var(--ink) 25%, var(--terracotta) 25%);
   background-size: 100% 1lh;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1097,7 +1097,7 @@ footer {
 .editorial .footer-logo em { color: var(--ink); }
 
 .editorial .footer-logo em:hover {
-  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  background: linear-gradient(to bottom, var(--ink) 25%, var(--terracotta) 25%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
