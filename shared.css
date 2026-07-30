@@ -984,6 +984,20 @@ footer {
 
 .editorial .page-title em { color: var(--terracotta); }
 
+/* Split-color hover, same as the logo: top half ink, bottom half terracotta.
+   background-size 1lh tiles the gradient per text line, so multi-line
+   headings split within each line instead of line-by-line. */
+.editorial .section-title:hover,
+.editorial .approach-item-title:hover,
+.editorial .principle-title:hover {
+  background: linear-gradient(to bottom, var(--ink) 50%, var(--terracotta) 50%);
+  background-size: 100% 1lh;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .editorial .eyebrow { color: var(--terracotta); }
 
 .editorial .page-subtitle,
