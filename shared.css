@@ -758,6 +758,7 @@ footer {
 .ehero {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
+  align-items: center;
   min-height: 100vh;
   padding-top: 64px;
   position: relative;
@@ -889,11 +890,11 @@ footer {
   margin: 28px 28px 28px 0;
   border-radius: 8px;
   box-shadow: 0 12px 44px rgba(35,34,28,0.08);
-  padding: clamp(56px, 8vh, 104px) clamp(36px, 5.5vw, 96px);
+  padding: clamp(44px, 6vh, 72px) clamp(36px, 5.5vw, 96px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(36px, 5vh, 52px);
+  gap: clamp(32px, 4.5vh, 44px);
 }
 
 .principle {
